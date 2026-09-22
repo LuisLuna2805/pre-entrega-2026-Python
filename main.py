@@ -20,7 +20,7 @@ while True:
             contador_de_errores = 0
             print("\nListado de productos:")
             for i, producto in enumerate(productos):
-                print(f"{i}.{producto}")
+                print(f"{i}.{producto}")  
 
     #Opcion para Remover un producto por nombre
     elif opciones.strip().upper() == "R":
@@ -65,7 +65,8 @@ while True:
         producto_buscado = input("Ingrese producto a buscar:\n")
         producto_buscado_limpio = producto_buscado.strip().capitalize()
         if producto_buscado_limpio in productos:
-            print(f"Producto encontrado, hay {producto_buscado_limpio}.\n")
+            posicion = productos.index(producto_buscado_limpio)
+            print(f"Producto encontrado, hay {producto_buscado_limpio} en posicion N°{posicion}.\n")
         else:
             print(f"Perdon, no tenemos {producto_buscado_limpio}.\n")
 
