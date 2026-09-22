@@ -27,9 +27,10 @@ while True:
         contador_de_errores = 0
         producto_removido = input("Ingrese producto a remover:\n")
         producto_removido_limpio = producto_removido.strip().capitalize()
+        posicion = productos.index(producto_removido_limpio)
         if producto_removido_limpio in productos:
             productos.remove(producto_removido_limpio)
-            print(f"{producto_removido_limpio} removido con exito.\n")
+            print(f"producto '{producto_removido_limpio}' removido con exito de la posicion N°{posicion}.\n")
         else:
             print(f"No se pudo remover {producto_removido_limpio} porque no pertenecia a la lista.\n")
 
@@ -44,7 +45,7 @@ while True:
             if indice_removido < len(productos):
                 producto_removido_limpio = productos[indice_removido]
                 productos.pop(indice_removido)
-                print(f"producto '{indice_removido}.{producto_removido_limpio}' removido con exito.\n")
+                print(f"producto '{producto_removido_limpio}' removido con exito de la posicion N°{indice_removido}.\n")
             else:
                 print(f"No se pudo remover '{indice_removido}' porque no pertenecia a la lista.\n")    
 
