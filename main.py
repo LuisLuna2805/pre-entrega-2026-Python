@@ -52,11 +52,14 @@ while True:
     elif opciones.strip().upper() == "A":
         contador_de_errores = 0
         producto_agregado = input("Ingrese producto a agregar:\n")
-        producto_agregado_limpio = producto_agregado.strip().capitalize()
-        if producto_agregado_limpio in productos:
-            print(f"El producto {producto_agregado_limpio} ya pertenece a la lista.\n")
+        if not producto_agregado.strip():
+            print("El nombre del producto no puede estar vacío.\n")
         else:
-            productos.append(producto_agregado_limpio)
+            producto_agregado_limpio = producto_agregado.strip().capitalize()
+            if producto_agregado_limpio in productos:
+                print(f"El producto {producto_agregado_limpio} ya pertenece a la lista.\n")
+            else:
+                productos.append(producto_agregado_limpio)
             print(f"{producto_agregado_limpio} agregado con exito.\n")
 
     #Opcion para Buscar un producto
