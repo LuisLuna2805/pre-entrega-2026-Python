@@ -5,11 +5,11 @@ contador_de_errores = 0
 while True:
     opciones = input("-----------------------------\n"
                     "**** Menu de opciones **** \n\n"
-                    "       'L' - Listar\n"
-                    "       'R' - Remover por nombre\n"
-                    "       'X' - Remover por indice\n"
-                    "       'A' - Agregar\n"
-                    "       'B' - Buscar\n"
+                    "       'L' - Listar productos\n"
+                    "       'R' - Remover producto por nombre\n"
+                    "       'X' - Remover producto por indice\n"
+                    "       'A' - Agregar producto\n"
+                    "       'B' - Buscar producto\n"
                     "       'S' - Salir\n"
                     "-----------------------------\n"
                     "Ingrese una letra: ")
